@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { auth } from "./config";
 import { db } from "./config";
 import { doc, setDoc } from "firebase/firestore";
@@ -13,5 +13,25 @@ export async function signUp(firstName, lastName, email, password){
         await setDoc(userRef, { firstName: firstName, lastName: lastName, timestamp: new Date()});
     } catch (error) {
         console.error("Error fetching user data: " ,error);
+    }
+}
+
+export async function login(email, password){
+    try {
+
+        const userCredential = await signInWithEmailAndPassword(auth, email, password);
+        window.location.href = "citymanager.html";        
+
+    } catch (error) {
+        console.error("Login error: " + error.message);
+    }
+}
+
+export async function logout(){
+    try {
+        await signOut(auth);
+        console.log("User Logged Out");
+    } catch (error) {
+        console.error("Logout error: ", error.message);
     }
 }

@@ -1,6 +1,5 @@
-const { signUp } = require("./auth");
+const { signUp, logout } = require("./auth");
 
-console.log("index.js");
 const signUpForm = document.querySelector("#signupForm");
 signUpForm.addEventListener("submit", (event)=>{
     event.preventDefault();
@@ -11,4 +10,10 @@ signUpForm.addEventListener("submit", (event)=>{
 
     signUp(firstName, lastName, email, password);
 
+});
+
+const logoutForm = document.querySelector("#logoutForm");
+logoutForm.addEventListener("submit", (event)=>{
+    event.preventDefault();
+    logout();
 });
