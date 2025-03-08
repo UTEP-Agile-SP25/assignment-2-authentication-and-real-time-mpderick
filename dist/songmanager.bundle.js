@@ -188,6 +188,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   auth: () => (/* binding */ auth),\n/* harmony export */   db: () => (/* binding */ db),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! firebase/app */ \"./node_modules/firebase/app/dist/esm/index.esm.js\");\n/* harmony import */ var firebase_auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! firebase/auth */ \"./node_modules/firebase/auth/dist/esm/index.esm.js\");\n/* harmony import */ var firebase_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! firebase/firestore */ \"./node_modules/firebase/firestore/dist/esm/index.esm.js\");\n\n\n\n\n// https://firebase.google.com/docs/web/setup#available-libraries\n\nconst firebaseConfig = {\n\n  apiKey: \"AIzaSyAX-5UVCHG-9dIIyN9xj-aQ-ZE6y58Mg7A\",\n\n  authDomain: \"moreno-sandbox-543fc.firebaseapp.com\",\n\n  projectId: \"moreno-sandbox-543fc\",\n\n  storageBucket: \"moreno-sandbox-543fc.firebasestorage.app\",\n\n  messagingSenderId: \"433650544309\",\n\n  appId: \"1:433650544309:web:8332999e3c94a8e87e58fc\"\n\n};\n\n\n// Initialize Firebase\n\nconst app = (0,firebase_app__WEBPACK_IMPORTED_MODULE_0__.initializeApp)(firebaseConfig);\nconst auth = (0,firebase_auth__WEBPACK_IMPORTED_MODULE_1__.getAuth)(app);\nconst db = (0,firebase_firestore__WEBPACK_IMPORTED_MODULE_2__.getFirestore)(app);\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (app);\n\n\n//# sourceURL=webpack://assignment-2-authentication-and-real-time-mpderick/./src/config.js?");
 
+/***/ }),
+
+/***/ "./src/songmanager.js":
+/*!****************************!*\
+  !*** ./src/songmanager.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./auth */ \"./src/auth.js\");\n\n\n\n//# sourceURL=webpack://assignment-2-authentication-and-real-time-mpderick/./src/songmanager.js?");
+
 /***/ })
 
 /******/ 	});
@@ -262,7 +272,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/auth.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/songmanager.js");
 /******/ 	
 /******/ })()
 ;

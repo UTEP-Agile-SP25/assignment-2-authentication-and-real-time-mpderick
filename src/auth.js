@@ -1,7 +1,15 @@
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { auth } from "./config";
 import { db } from "./config";
 import { doc, setDoc } from "firebase/firestore";
+
+onAuthStateChanged(auth, async (user)=>{
+    if(user){
+        console.log("Logged In User: ", user.email);
+    }else{
+        console.log("No user is signed in");
+    }
+});
 
 export async function signUp(firstName, lastName, email, password){
     try {
