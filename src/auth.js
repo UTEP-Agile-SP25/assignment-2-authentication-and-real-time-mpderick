@@ -20,7 +20,7 @@ export async function login(email, password){
     try {
 
         const userCredential = await signInWithEmailAndPassword(auth, email, password);
-        window.location.href = "citymanager.html";        
+        window.location.href = "songmanager.html";        
 
     } catch (error) {
         console.error("Login error: " + error.message);
